@@ -1,7 +1,7 @@
-resource "azurerm_network_security_group" "montest-nsg" {
-  name                = "open-montest-nsg"
+resource "azurerm_network_security_group" "jmontest-nsg" {
+  name                = "jmontest-nsg"
   location            = var.a00_location
-  resource_group_name = azurerm_resource_group.corda-montest.name
+  resource_group_name = azurerm_resource_group.corda-jmontest.name
 
   security_rule {
     name = "SSH_inbound"
@@ -19,10 +19,7 @@ resource "azurerm_network_security_group" "montest-nsg" {
 
 
    tags = {
-    Customer    = var.customer
-    Purpose     = var.purpose
     Environment = var.envname
-    Builder     = var.builder
    }
    
 }
