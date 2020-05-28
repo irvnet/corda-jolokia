@@ -131,7 +131,7 @@ EOF
 
 
 ### Bootstrap the network with the Corda Open Source network bootstrapper
-For the purpose of this exercise, we'll use Corda Open Source to simplify access to binaries... however in practice, it works the same with Corda Enterprise. The only difference, depending on what's used for a database, may be that you'll need a database block when using enterprise.  You can read more about additional [features in Enterprise vs Open Source] (https://docs.corda.net/docs/corda-enterprise/4.4.html#corda-enterprise-vs-corda-open-source-feature-comparison) in the documentation.
+For the purpose of this exercise, we'll use Corda Open Source to simplify access to binaries... however in practice, it works the same with Corda Enterprise. The only difference, depending on what's used for a database, may be that you'll need a database block when using enterprise.  You can read more about additional [features in Enterprise vs Open Source](https://docs.corda.net/docs/corda-enterprise/4.4.html#corda-enterprise-vs-corda-open-source-feature-comparison) in the documentation.
 
 Download the [Corda Network Bootstrapper](https://docs.corda.net/docs/corda-os/4.4/network-bootstrapper.html#test-deployments) jar file to the target machine
 ```
