@@ -136,10 +136,17 @@ EOF
 
 
 
-### Bootstrap the network with the Corda Enterprise network bootstrapper
-Upload the bootstrapper jar file to the target machine
+### Bootstrap the network with the Corda Open Source network bootstrapper
+For the purpose of this exercise, we'll use Corda Open Source to simplify access to binaries... however in practice, it works the same with Corda Enterprise. The only difference, depending on what's used for a database, may be that you'll need a database block when using enterprise.
+
+Download the [Corda Network Bootstrapper](https://docs.corda.net/docs/corda-os/4.4/network-bootstrapper.html#test-deployments) jar file to the target machine
 ```
+{
+cd ${HOME}/network/
+curl -O https://software.r3.com/artifactory/corda-releases/net/corda/corda-tools-network-bootstrapper/4.4/corda-tools-network-bootstrapper-4.4.jar
+mv corda-tools-network-bootstrapper-4.4.jar bootstrapper.jar
 java -jar bootstrapper.jar -V
+}
 ```
 
 ### Run the bootstrapper to generate all the necessary network artifacts
