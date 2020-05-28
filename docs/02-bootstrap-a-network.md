@@ -148,7 +148,7 @@ java -jar bootstrapper.jar -V
 java -jar bootstrapper.jar --dir .
 ```
 
-### Start the notary
+### Start the notary as a background process
 Note: starting the node with 'nohup' and '&' at the end will start the process in the background. The output that normally goes to stdout will appear in <node-install-dir>/nohup.out. Additionally <node-install-dir>/process-id will capture the nodes process id. 
 ```
 {
@@ -158,7 +158,7 @@ nohup java -jar corda.jar &
 ```
 
 
-### Start Andrea's node
+### Start Andrea's node as a background process
 ```
 {
 cd ${HOME}/network/andrea
@@ -166,7 +166,7 @@ nohup java -jar corda.jar &
 }
 ```
 
-### Start Barbara's node
+### Start Barbara's node as a background process
 ```
 {
 cd ${HOME}/network/barbara
@@ -213,9 +213,13 @@ ssh testuser@localhost -p 3000
 ```
 The node should respond by showing the list of nodes on the network... including nodes for Andrea, Barbara and a notary.
 
-### Shutdown the node
+### Shutdown the nodes and notary 
 ```
->>> run gracefulShutdown
+{
+ for nodename in notary andrea barbara; do
+    kill -9 $(cat ${HOME}/network/${nodename}/process-id)
+ done
+}
 ```
 
 
