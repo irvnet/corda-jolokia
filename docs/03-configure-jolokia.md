@@ -9,18 +9,17 @@
 ```
 {
 cd ${HOME}/network/
-curl -O https://search.maven.org/remotecontent?filepath=org/jolokia/jolokia-jvm/1.6.1/jolokia-jvm-1.6.1-agent.jar
-mv jolokia-jvm-1.6.1-agent.jar jolokia-agent.jar
+curl -O https://repo1.maven.org/maven2/org/jolokia/jolokia-jvm/1.6.1/jolokia-jvm-1.6.1-agent.jar
 }
 ```
 
 ### Add the Jolokia driver to each of the nodes
 ```
 {
-for nodename in notary andrea barbara; do
+ for nodename in notary andrea barbara; do
     mkdir -p ${HOME}/network/${nodename}/drivers
-    cp jolokia-agent.jar ${HOME}/network/${nodename}/drivers
-done
+    cp jolokia-jvm-1.6.1-agent.jar ${HOME}/network/${nodename}/drivers
+ done
 }
 ```
 
@@ -30,13 +29,13 @@ Start each node in the background with a different port for the Jolokia endpoint
 ```
 {
 cd ${HOME}/network/andrea
-nohup java -Dcapsule.jvm.args="-javaagent:drivers/jolokia-agent.jar=port=12009,host=localhost" -jar corda.jar &
+nohup java -Dcapsule.jvm.args="-javaagent:drivers/jolokia-jvm-1.6.1-agent.jar=port=12009,host=localhost" -jar corda.jar &
 
 cd ${HOME}/network/barbara
-nohup java -Dcapsule.jvm.args="-javaagent:drivers/jolokia-agent.jar=port=13009,host=localhost" -jar corda.jar &
+nohup java -Dcapsule.jvm.args="-javaagent:drivers/jolokia-jvm-1.6.1-agent.jar=port=13009,host=localhost" -jar corda.jar &
 
 cd ${HOME}/network/notary
-nohup java -Dcapsule.jvm.args="-javaagent:drivers/jolokia-agent.jar=port=14009,host=localhost" -jar corda.jar &
+nohup java -Dcapsule.jvm.args="-javaagent:drivers/jolokia-jvm-1.6.1-agent.jar=port=14009,host=localhost" -jar corda.jar &
 }
 ```
 
