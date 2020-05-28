@@ -148,32 +148,29 @@ java -jar bootstrapper.jar -V
 java -jar bootstrapper.jar --dir .
 ```
 
-### Start the notary and check the [logs](https://docs.corda.net/docs/corda-os/4.4/node-administration.html#logging)
+### Start the notary
 Note: starting the node with 'nohup' and '&' at the end will start the process in the background. The output that normally goes to stdout will appear in <node-install-dir>/nohup.out. Additionally <node-install-dir>/process-id will capture the nodes process id. 
 ```
 {
 cd ${HOME}/network/notary
 nohup java -jar corda.jar &
-tail logs/node-{hostname}.log
 }
 ```
 
 
-### Start Andrea's node and check the logs
+### Start Andrea's node
 ```
 {
 cd ${HOME}/network/andrea
 nohup java -jar corda.jar &
-tail logs/node-{hostname}.log
 }
 ```
 
-### Start Barbara's node and check the logs
+### Start Barbara's node
 ```
 {
 cd ${HOME}/network/barbara
 nohup java -jar corda.jar &
-tail logs/node-{hostname}.log
 }
 ```
 
