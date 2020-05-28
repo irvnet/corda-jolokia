@@ -18,7 +18,6 @@ mv jolokia-jvm-1.6.1-agent.jar jolokia.jar
 ```
 {
 for nodename in notary andrea barbara; do
-    kill -9 $(cat ${HOME}/network/${nodename}/process-id)
     mkdir -p ${HOME}/network/${nodename}/drivers
     cp jolokia.jar ${HOME}/network/${nodename}/drivers
 done
