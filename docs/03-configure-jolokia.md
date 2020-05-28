@@ -26,7 +26,6 @@ done
 ```
 
 ### Restart each of the nodes 
-todo: change localhost referneces to 0.0.0.0 so jolokia will bind to all interfaces
 
 Start each node in the background with a different port for the Jolokia endpoint. Check the log for each node to ensure there are no errors.
 ```
