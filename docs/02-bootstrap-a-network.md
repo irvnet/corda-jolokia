@@ -51,9 +51,7 @@ rpcUsers=[
    }
 ]
 devMode=true
-database = {
-   runMigration = true
-}
+
 EOF
 
 ```
@@ -88,9 +86,7 @@ rpcUsers=[
 ]
 
 devMode=true
-database = {
-   runMigration = true
-}
+
 EOF
 
 ```
@@ -127,9 +123,7 @@ rpcUsers=[
 ]
 
 devMode=true
-database = {
-   runMigration = true
-}
+
 EOF
 
 ```
