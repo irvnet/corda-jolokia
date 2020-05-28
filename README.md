@@ -22,10 +22,10 @@ For this exercise you will need:
 ---
 ## Outline
 
-- [Prepare a virtual machine](./01-provision-vm.md)
-- [Bootstrap a Network](./02-bootstrap-a-network.md)
-- [Configure the Jolokia Driver](./03-configure-jolokia.md)
-- [Configure Hawtio to view node metrics](./04-configure-hawtio.md)
+- [Prepare a virtual machine](./docs/01-provision-vm.md)
+- [Bootstrap a Network](./docs/02-bootstrap-a-network.md)
+- [Configure the Jolokia Driver](./docs/03-configure-jolokia.md)
+- [Configure Hawtio to view node metrics](./docs/04-configure-hawtio.md)
 
 
 
