@@ -9,15 +9,11 @@ This tutorial is not for readers looking for a fully automated solution... thoug
 ## Target Audience
 The intended audience for this tutorial is someone configuring a Corda node to obtain metrics and test the configuration by viewing the available metrics in a simple viewer. 
 
-
----
-## Environment Details
 For this exercise you will need:
-- Ubuntu 18.04 vm with a minimum of 2vcpu and 4gb memory
-- Access to Azure with a authorization to create an vm's
-- Corda Enterprise Bootstrapper (tested with CE v4.4)
-- Jolokia JVM Agent (tested with v1.6.1)
-- Hawtio jar file (tested with v2.10 )
+- a virtual machine with at least 4gb memory
+- Corda Bootstrapper
+- Jolokia JVM Agent
+- Hawtio jar file
 
 ---
 ## Outline
@@ -26,9 +22,3 @@ For this exercise you will need:
 - [Bootstrap a Network](./docs/02-bootstrap-a-network.md)
 - [Configure the Jolokia Driver](./docs/03-configure-jolokia.md)
 - [Configure Hawtio to view node metrics](./docs/04-configure-hawtio.md)
-
-
-
-
-
-
