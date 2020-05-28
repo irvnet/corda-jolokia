@@ -28,8 +28,10 @@ Required Software:
 
 ### Update the packages on the vm
 ```
+{
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install curl -y
+}
 ```
 
 ### Install azul jdk
